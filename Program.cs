@@ -4,37 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace discrete_1
+namespace discrete_2
 {
     internal class Program
     {
         static void Main(string[] args)
-
-
         {
-
+            Console.WriteLine("enter frist num");
             int start = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter second num ");
             int end = int.Parse(Console.ReadLine());
             int sum = 0;
-            for (int i = start; i<=end; i++)
+            for( int x = start; x <= end; x++)
             {
-                for (int x = 1; x<=i; x++)
+
+                sum = 0;
+                for(int i = 1; i <= x; i++)
                 {
-                    if (i%x==0)
-                        sum++;
-                }
-                if (sum==2)
-                {
-                    Console.WriteLine(i);
-                    sum=0;
-                }
-                else
-                {
-                    sum=0;
-                    continue;
+
+                    if(x % i ==0)
+                    {
+                        sum += i;
+                    }
+
+                    if(sum == x)
+                    {
+
+                        Console.WriteLine(x+"is a perfect mumber");
+                    }             
                 }
             }
-
 
         }
     }
